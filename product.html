@@ -1,0 +1,2633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail – AutoFill Premium Body Solutions</title>
+  <meta name="description"
+    content="Detailed product information for AutoFill premium polyester putty and body fillers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0F172A;
+      --royal: #2563EB;
+      --orange: #F97316;
+      --white: #FFFFFF;
+      --lightgray: #F8FAFC;
+      --gray: #64748B;
+      --border: #E2E8F0;
+      --dark2: #1E293B;
+      --green-wa: #25D366
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html,
+    body {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--navy);
+      background: #fff;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    /* ===== PAGE LOADER ===== */
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: var(--navy);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity .6s ease, visibility .6s ease
+    }
+
+    .loader.done {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .loader-ring {
+      width: 60px;
+      height: 60px;
+      border: 3px solid rgba(249, 115, 22, .2);
+      border-top-color: var(--orange);
+      border-radius: 50%;
+      animation: spin .8s linear infinite
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* ===== TOP BAR ===== */
+    .topbar {
+      background: var(--navy);
+      padding: 8px 0;
+      font-size: 13px;
+      color: #94A3B8
+    }
+
+    .topbar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .topbar a {
+      color: #CBD5E1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color .2s
+    }
+
+    .topbar a:hover {
+      color: var(--orange)
+    }
+
+    @media (max-width: 640px) {
+      .header-cta {
+        display: none !important;
+      }
+
+      .topbar {
+        overflow: hidden;
+      }
+
+      .topbar .topbar-inner {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        width: max-content;
+        padding-bottom: 0;
+        -webkit-animation: topbar-marquee 15s linear infinite;
+        animation: topbar-marquee 15s linear infinite;
+      }
+
+      .topbar a,
+      .topbar span {
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+    }
+
+    nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+
+    @media(max-width: 1024px) {
+      .breadcrumb {
+        display: none !important;
+      }
+
+      nav {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        padding: 80px 24px 24px;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        align-items: flex-start;
+      }
+
+      body.dark-theme nav {
+        background: var(--lightgray);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+      }
+
+      nav.active-mobile {
+        right: 0;
+      }
+
+      nav a {
+        width: 100%;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 16px;
+        display: block;
+        color: var(--navy);
+        font-weight: 600;
+      }
+
+      .hamburger {
+        display: flex;
+        z-index: 1000;
+        position: relative;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+
+    @-webkit-keyframes topbar-marquee {
+      0% {
+        -webkit-transform: translateX(100vw);
+      }
+
+      100% {
+        -webkit-transform: translateX(-100%);
+      }
+    }
+
+    @keyframes topbar-marquee {
+      0% {
+        transform: translateX(100vw);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .08);
+      position: sticky;
+      top: 0;
+      z-index: 1000
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      gap: 20px
+    }
+
+    .logo-mark {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+      cursor: pointer
+    }
+
+    .logo-mark span {
+      color: var(--orange)
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--gray)
+    }
+
+    .breadcrumb a {
+      color: var(--royal);
+      transition: color .2s
+    }
+
+    .breadcrumb a:hover {
+      color: var(--orange)
+    }
+
+    .breadcrumb-sep {
+      color: var(--border)
+    }
+
+    .header-cta {
+      background: var(--orange);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: all .2s;
+      box-shadow: 0 4px 15px rgba(249, 115, 22, .35)
+    }
+
+    .header-cta:hover {
+      background: #ea6c0a;
+      transform: translateY(-1px)
+    }
+
+    /* ===== HERO BANNER ===== */
+    .prod-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--navy)
+    }
+
+    .prod-hero-bg {
+      position: absolute;
+      inset: 0
+    }
+
+    .prod-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .35
+    }
+
+    .prod-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10, 18, 40, .95) 0%, rgba(10, 18, 40, .7) 60%, rgba(37, 99, 235, .15) 100%)
+    }
+
+    .prod-hero-particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      animation: particleFloat linear infinite;
+      pointer-events: none
+    }
+
+    @keyframes particleFloat {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0
+      }
+
+      10% {
+        opacity: 1
+      }
+
+      90% {
+        opacity: .5
+      }
+
+      100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0
+      }
+    }
+
+    .prod-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(37, 99, 235, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235, .05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: .4
+    }
+
+    .prod-hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 64px;
+      padding-top: 80px;
+      padding-bottom: 80px
+    }
+
+    .prod-hero-left {}
+
+    .prod-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249, 115, 22, .15);
+      border: 1px solid rgba(249, 115, 22, .35);
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      animation: fadeSlideUp .7s ease both
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .prod-hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.08;
+      margin-bottom: 20px;
+      animation: fadeSlideUp .7s .1s ease both
+    }
+
+    .prod-hero-title span {
+      color: var(--orange)
+    }
+
+    .prod-hero-tag {
+      font-size: 16px;
+      color: rgba(255, 255, 255, .7);
+      margin-bottom: 32px;
+      font-weight: 500;
+      animation: fadeSlideUp .7s .2s ease both
+    }
+
+    .prod-hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeSlideUp .7s .3s ease both
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all .25s;
+      box-shadow: 0 4px 20px rgba(249, 115, 22, .4)
+    }
+
+    .btn-primary:hover {
+      background: #ea6c0a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(249, 115, 22, .5)
+    }
+
+    .btn-wa {
+      background: var(--green-wa);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all .25s
+    }
+
+    .btn-wa:hover {
+      background: #20b858;
+      transform: translateY(-2px)
+    }
+
+    /* Product visual right side */
+    .prod-hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeSlideUp .7s .2s ease both
+    }
+
+    .prod-can-showcase {
+      position: relative;
+      width: 340px;
+      height: 340px
+    }
+
+    .prod-can-glow {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      animation: glowPulse 3s ease-in-out infinite
+    }
+
+    @keyframes glowPulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 60px 20px rgba(249, 115, 22, .25)
+      }
+
+      50% {
+        box-shadow: 0 0 100px 40px rgba(249, 115, 22, .45)
+      }
+    }
+
+    .prod-can-circle {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 30px auto 0;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, .5), 0 0 0 1px rgba(255, 255, 255, .1), inset 0 1px 0 rgba(255, 255, 255, .15);
+      position: relative;
+      overflow: hidden;
+      animation: float 4s ease-in-out infinite
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-16px)
+      }
+    }
+
+    .prod-can-circle::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      right: -30px;
+      height: 60px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .15), transparent);
+      border-radius: 50%
+    }
+
+    .can-brand-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 6px
+    }
+
+    .can-product-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      line-height: 1.2
+    }
+
+    .can-weight-text {
+      font-size: 11px;
+      color: rgba(255, 255, 255, .5);
+      margin-top: 8px;
+      font-weight: 600
+    }
+
+    /* floating stats */
+    .hero-stat-float {
+      position: absolute;
+      background: rgba(255, 255, 255, .95);
+      border-radius: 12px;
+      padding: 10px 14px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
+      animation: float 4s ease-in-out infinite
+    }
+
+    .hero-stat-float:nth-child(2) {
+      top: 10%;
+      right: -5%;
+      animation-delay: .5s
+    }
+
+    .hero-stat-float:nth-child(3) {
+      bottom: 12%;
+      left: -5%;
+      animation-delay: 1s
+    }
+
+    .hstat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--orange)
+    }
+
+    .hstat-label {
+      font-size: 10px;
+      color: var(--gray);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .5px
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    /* ===== QUICK SPECS BAR ===== */
+    .quick-specs {
+      background: var(--navy);
+      padding: 0
+    }
+
+    .quick-specs-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-left: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .qspec {
+      padding: 24px;
+      border-right: 1px solid rgba(255, 255, 255, .08);
+      text-align: center;
+      transition: background .2s;
+      position: relative;
+      overflow: hidden
+    }
+
+    .qspec::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width .4s;
+      border-radius: 1px
+    }
+
+    .qspec:hover::before {
+      width: 60%
+    }
+
+    .qspec:hover {
+      background: rgba(255, 255, 255, .04)
+    }
+
+    .qspec-val {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--orange)
+    }
+
+    .qspec-label {
+      font-size: 11px;
+      color: rgba(255, 255, 255, .5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+      font-weight: 600
+    }
+
+    /* ===== DESCRIPTION SECTION ===== */
+    .desc-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+    
+    .desc-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--gray);
+      max-width: 900px;
+    }
+
+    /* ===== IMAGE GALLERY ===== */
+    .gallery-section {
+      padding: 80px 0;
+      background: #fff
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--royal);
+      margin-bottom: 12px
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px
+    }
+
+    .section-title span {
+      color: var(--orange)
+    }
+
+    .divider-line {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--royal));
+      border-radius: 2px;
+      margin: 16px 0 40px
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 16px
+    }
+
+    .gallery-img {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gallery-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease
+    }
+
+    .gallery-img:hover img {
+      transform: scale(1.06)
+    }
+
+    .gallery-img.main {
+      grid-row: 1/3;
+      min-height: 480px
+    }
+
+    .gallery-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(10, 18, 40, .8) 100%);
+      opacity: 0;
+      transition: opacity .4s
+    }
+
+    .gallery-img:hover .gallery-img-overlay {
+      opacity: 1
+    }
+
+    .gallery-img-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: all .4s
+    }
+
+    .gallery-img:hover .gallery-img-label {
+      transform: none;
+      opacity: 1
+    }
+
+    .gallery-img.side {
+      min-height: 228px
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .92);
+      z-index: 9000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      backdrop-filter: blur(10px)
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 12px;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, .5)
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: #fff;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s
+    }
+
+    .lightbox-close:hover {
+      background: var(--orange);
+      border-color: transparent
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-section {
+      padding: 80px 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden
+    }
+
+    .video-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, .08), transparent 60%)
+    }
+
+    .video-section .section-eyebrow {
+      color: #60A5FA
+    }
+
+    .video-section .section-title {
+      color: #fff
+    }
+
+    .video-section .divider-line {
+      margin-bottom: 20px
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center
+    }
+
+    .video-desc {
+      color: #94A3B8;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 32px
+    }
+
+    .video-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px
+    }
+
+    .vfeat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #CBD5E1;
+      font-size: 14px;
+      font-weight: 500
+    }
+
+    .vfeat-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #410621);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0
+    }
+
+    .vfeat-dot svg {
+      width: 10px;
+      height: 10px;
+      fill: #fff
+    }
+
+    .video-player-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0d1f3c, #1a3a6c);
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, .4)
+    }
+
+    .video-player-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(249, 115, 22, .05), transparent);
+      pointer-events: none
+    }
+
+    .video-bg-img {
+      position: absolute;
+      inset: 0
+    }
+
+    .video-bg-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .3
+    }
+
+    .play-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(249, 115, 22, .9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      transition: all .3s;
+      box-shadow: 0 0 0 24px rgba(249, 115, 22, .15), 0 0 0 48px rgba(249, 115, 22, .05)
+    }
+
+    .video-player-wrap:hover .play-circle {
+      transform: scale(1.12);
+      background: #ea6c0a;
+      box-shadow: 0 0 0 28px rgba(249, 115, 22, .2), 0 0 0 56px rgba(249, 115, 22, .07)
+    }
+
+    .play-circle svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+      margin-left: 4px
+    }
+
+    .video-label {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, .6);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      letter-spacing: .5px
+    }
+
+    /* YouTube Modal */
+    .yt-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .92);
+      z-index: 9000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      backdrop-filter: blur(10px)
+    }
+
+    .yt-modal.open {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .yt-modal-inner {
+      width: min(900px, 90vw);
+      position: relative
+    }
+
+    .yt-modal-inner iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 16px;
+      border: none
+    }
+
+    .yt-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all .2s
+    }
+
+    .yt-close:hover {
+      background: var(--orange)
+    }
+
+    /* ===== SPECS SECTION ===== */
+    .specs-section {
+      padding: 80px 0;
+      background: var(--lightgray)
+    }
+
+    .specs-grid-full {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 40px
+    }
+
+    .spec-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      transition: all .3s;
+      position: relative;
+      overflow: hidden
+    }
+
+    .spec-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--royal));
+      transform: scaleX(0);
+      transition: transform .3s;
+      transform-origin: left
+    }
+
+    .spec-card:hover::before {
+      transform: scaleX(1)
+    }
+
+    .spec-card:hover {
+      box-shadow: 0 12px 40px rgba(37, 99, 235, .1);
+      transform: translateY(-4px)
+    }
+
+    .spec-card-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px
+    }
+
+    .spec-card-val {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    .spec-card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(249, 115, 22, .12), rgba(249, 115, 22, .06));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px
+    }
+
+    .spec-card-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--orange)
+    }
+
+    /* ===== BENEFITS SECTION ===== */
+    .benefits-section {
+      padding: 80px 0;
+      background: #fff
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center
+    }
+
+    .benefits-list-full {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 40px
+    }
+
+    .benefit-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: all .3s
+    }
+
+    .benefit-row:hover {
+      border-color: rgba(37, 99, 235, .2);
+      box-shadow: 0 8px 30px rgba(37, 99, 235, .08);
+      transform: translateX(4px)
+    }
+
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--royal), #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0
+    }
+
+    .benefit-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff
+    }
+
+    .benefit-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark2);
+      line-height: 1.5
+    }
+
+    .benefit-sub {
+      font-size: 13px;
+      color: var(--gray);
+      font-weight: 400;
+      margin-top: 3px
+    }
+
+    .benefits-image-wrap {
+      position: relative
+    }
+
+    .benefits-image-wrap img {
+      border-radius: 20px;
+      width: 100%;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, .15)
+    }
+
+    .benefits-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--orange);
+      color: #fff;
+      border-radius: 16px;
+      padding: 16px 20px;
+      box-shadow: 0 16px 40px rgba(249, 115, 22, .4);
+      font-family: 'Montserrat', sans-serif
+    }
+
+    .benefits-badge-num {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1
+    }
+
+    .benefits-badge-text {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: .85
+    }
+
+    /* ===== HOW TO USE SECTION ===== */
+    .how-to-use {
+      background: #0B1021;
+      position: relative;
+      padding: 80px 0;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    /* Circuit background lines */
+    .how-to-use::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at center, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 30px 30px, 30px 30px;
+      pointer-events: none;
+    }
+
+    /* Keep header styles */
+    .htu-header {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .htu-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #94A3B8;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .htu-title {
+      font-size: 42px;
+      font-weight: 800;
+      background: linear-gradient(to bottom, #FFFFFF 0%, #B0C4DE 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: capitalize;
+      margin: 0;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .htu-title span {
+      color: var(--orange);
+    }
+
+    .htu-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .htu-step {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .htu-step:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Connecting Line with Energy Flow */
+    .htu-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 60px;
+      right: -60px;
+      width: 80px;
+      height: 2px;
+      background: rgba(245, 158, 11, 0.2);
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .htu-step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      top: 60px;
+      right: -60px;
+      width: 30px;
+      height: 2px;
+      background: #F59E0B;
+      box-shadow: 0 0 10px #F59E0B, 0 0 20px #F59E0B;
+      z-index: 1;
+      animation: circuit-flow 2s infinite linear;
+    }
+
+    @keyframes circuit-flow {
+      0% {
+        transform: translateX(-80px);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(80px);
+        opacity: 0;
+      }
+    }
+
+    .htu-node {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at top right, #1E293B, #0F172A);
+      border: 3px solid #334155;
+      box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.8),
+        inset 0 0 5px rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(249, 115, 22, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 24px;
+      z-index: 2;
+      transition: all 0.4s ease;
+    }
+
+    .htu-step:hover .htu-node {
+      box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.8),
+        inset 0 0 5px rgba(255, 255, 255, 0.2),
+        0 0 50px rgba(249, 115, 22, 0.4);
+      border-color: #475569;
+    }
+
+    .htu-node::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 2px dashed rgba(249, 115, 22, 0.4);
+      animation: htu-spin 12s linear infinite;
+    }
+
+    .htu-node::after {
+      content: '';
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      border: 1px solid rgba(249, 115, 22, 0.1);
+      border-top-color: rgba(249, 115, 22, 0.6);
+      animation: htu-spin 8s linear infinite reverse;
+    }
+
+    @keyframes htu-spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .htu-hex {
+      width: 70px;
+      height: 80px;
+      background: linear-gradient(135deg, #F59E0B, #B45309);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.4);
+      position: relative;
+      z-index: 2;
+      animation: hex-pulse 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes hex-pulse {
+      0% {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
+      }
+
+      100% {
+        filter: brightness(1.3) drop-shadow(0 0 20px rgba(245, 158, 11, 1));
+      }
+    }
+
+    .htu-hex::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      background: linear-gradient(135deg, #D97706, #92400E);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      z-index: -1;
+    }
+
+    .htu-num {
+      font-size: 32px;
+      font-weight: 900;
+      color: #FFF;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .htu-icon {
+      position: absolute;
+      right: -15px;
+      top: -10px;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #1E293B, #0F172A);
+      border: 2px solid #475569;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+      z-index: 3;
+      transition: all 0.3s ease;
+      animation: icon-float 4s infinite ease-in-out alternate;
+    }
+
+    @keyframes icon-float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .htu-step:hover .htu-icon {
+      transform: scale(1.1) translateY(-5px);
+      border-color: #F59E0B;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8), 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+
+    .htu-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #F8FAFC;
+      stroke-width: 1.5;
+      transition: stroke 0.3s ease;
+    }
+
+    .htu-step:hover .htu-icon svg {
+      stroke: #F59E0B;
+    }
+
+    .htu-step-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #F8FAFC;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      transition: color 0.3s ease;
+    }
+
+    .htu-step:hover .htu-step-title {
+      color: #F59E0B;
+    }
+
+    .htu-step-desc {
+      font-size: 12px;
+      color: #94A3B8;
+      line-height: 1.6;
+      max-width: 220px;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .htu-step:hover .htu-step-desc {
+      opacity: 1;
+    }
+
+    @media(max-width: 900px) {
+      .htu-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE/Edge */
+      }
+
+      .htu-container::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+      }
+
+      .htu-step {
+        flex: 0 0 280px;
+        scroll-snap-align: center;
+        margin-bottom: 0;
+      }
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      padding: 80px 0;
+      background: #fff
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, var(--navy), #1e3a5f);
+      border-radius: 24px;
+      padding: 56px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(249, 115, 22, .15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px
+    }
+
+    .cta-title span {
+      color: var(--orange)
+    }
+
+    .cta-sub {
+      font-size: 16px;
+      color: #94A3B8;
+      line-height: 1.6
+    }
+
+    .cta-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 220px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ===== RELATED PRODUCTS ===== */
+    .related-section {
+      padding: 80px 0;
+      background: var(--lightgray)
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 40px
+    }
+
+    .rel-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+      transition: all .3s;
+      cursor: pointer;
+      border: 1px solid transparent
+    }
+
+    .rel-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(37, 99, 235, .15);
+      border-color: rgba(37, 99, 235, .15)
+    }
+
+    .rel-img {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .rel-can {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center
+    }
+
+    .rel-can-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.2
+    }
+
+    .rel-info {
+      padding: 14px
+    }
+
+    .rel-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 4px
+    }
+
+    .rel-tag {
+      font-size: 11px;
+      color: var(--royal);
+      font-weight: 600;
+      margin-bottom: 10px
+    }
+
+    .rel-btn {
+      background: var(--orange);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 7px 12px;
+      border-radius: 6px;
+      text-align: center;
+      display: block;
+      transition: all .2s;
+      cursor: pointer;
+      border: none;
+      width: 100%
+    }
+
+    .rel-btn:hover {
+      background: #ea6c0a
+    }
+
+    /* ===== FOOTER ===== */
+    .prod-footer {
+      background: var(--navy);
+      padding: 28px 0;
+      text-align: center
+    }
+
+    .prod-footer p {
+      font-size: 13px;
+      color: #64748B
+    }
+
+    .prod-footer a {
+      color: var(--orange);
+      transition: color .2s
+    }
+
+    .prod-footer a:hover {
+      color: #fff
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all .6s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .reveal-delay-1 {
+      transition-delay: .1s
+    }
+
+    .reveal-delay-2 {
+      transition-delay: .2s
+    }
+
+    .reveal-delay-3 {
+      transition-delay: .3s
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:1024px) {
+
+      .prod-hero-content,
+      .benefits-grid,
+      .form-row {
+        grid-template-columns: 1fr
+      }
+
+      .prod-can-circle {
+        width: 240px;
+        height: 240px;
+      }
+
+      .prod-can-showcase {
+        width: 300px;
+        height: 300px;
+      }
+
+      .prod-hero-right {
+        display: none
+      }
+
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .cta-card {
+        grid-template-columns: 1fr
+      }
+
+      .quick-specs-inner {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr
+      }
+
+      .gallery-img.main {
+        min-height: 300px;
+        grid-row: auto
+      }
+    }
+
+    @media(max-width:640px) {
+      .specs-grid-full {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .benefits-list-full {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .benefit-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px 8px;
+        gap: 8px;
+      }
+
+      .benefit-text {
+        font-size: 13px;
+        line-height: 1.4;
+      }
+    }
+
+    /* ===== APP-LIKE BOTTOM NAVIGATION (MOBILE) ===== */
+    .app-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    body.dark-theme .app-bottom-nav {
+      background: #0F172A;
+      box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .app-bottom-nav-inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 60px;
+    }
+
+    .app-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 500;
+      gap: 4px;
+      width: 25%;
+      transition: color 0.2s;
+    }
+
+    .app-nav-item svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .app-nav-item.active {
+      color: var(--orange);
+    }
+
+    body.dark-theme .app-nav-item {
+      color: #94A3B8;
+    }
+
+    body.dark-theme .app-nav-item.active {
+      color: var(--orange);
+    }
+
+    @media(max-width: 768px) {
+      .app-bottom-nav {
+        display: block;
+      }
+
+      body {
+        padding-bottom: 60px;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+  <style>
+    /* Scoped Dark Mode Override */
+    body.dark-theme {
+      background: #020617 !important;
+      color: #e2e8f0 !important;
+    }
+
+    body.dark-theme header,
+    body.dark-theme .stats-bar,
+    body.dark-theme .desc-section,
+    body.dark-theme .gallery-section,
+    body.dark-theme .benefits-section,
+    body.dark-theme .cta-section,
+    body.dark-theme .related-section,
+    body.dark-theme .dropdown-menu,
+    body.dark-theme .stat-cell,
+    body.dark-theme .spec-card,
+    body.dark-theme .rel-card,
+    body.dark-theme .contact-left,
+    body.dark-theme .contact-right,
+    body.dark-theme .process-section,
+    body.dark-theme .quick-specs,
+    body.dark-theme .about-section,
+    body.dark-theme .products-section,
+    body.dark-theme .contact-section,
+    body.dark-theme .dealers-section,
+    body.dark-theme .faq-section {
+      background: #020617 !important;
+      color: #e2e8f0 !important;
+    }
+
+    body.dark-theme .header-inner {
+      background: transparent !important;
+    }
+
+    body.dark-theme .logo-mark {
+      color: #f8fafc !important;
+    }
+
+    body.dark-theme nav a {
+      color: #e2e8f0 !important;
+    }
+
+    body.dark-theme .section-title,
+    body.dark-theme .hstat-num,
+    body.dark-theme .htu-title {
+      color: #f8fafc !important;
+    }
+
+    body.dark-theme .stat-num,
+    body.dark-theme .spec-card-val,
+    body.dark-theme .rel-name,
+    body.dark-theme .benefit-text,
+    body.dark-theme .qspec-val {
+      color: #f8fafc !important;
+    }
+
+    body.dark-theme .desc-content p {
+      color: #94a3b8 !important;
+    }
+
+    body.dark-theme .hamburger span {
+      background: #fff !important;
+    }
+
+    body.dark-theme .benefit-row,
+    body.dark-theme .spec-card,
+    body.dark-theme .rel-card,
+    body.dark-theme .dealer-card,
+    body.dark-theme .product-card {
+      border-color: #334155 !important;
+      background: #0f172a !important;
+    }
+
+    body.dark-theme .product-card:hover,
+    body.dark-theme .spec-card:hover,
+    body.dark-theme .rel-card:hover,
+    body.dark-theme .benefit-row:hover {
+      background: #1e293b !important;
+      border-color: #475569 !important;
+    }
+
+    body.dark-theme .product-info {
+      background: #0f172a !important;
+    }
+
+    body.dark-theme .stat-cell {
+      border-color: #334155 !important;
+    }
+
+    body.dark-theme .topbar {
+      background: #000000 !important;
+      color: #f8fafc !important;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    body.dark-theme .topbar a,
+    body.dark-theme .topbar span {
+      color: #f8fafc !important;
+    }
+
+    body.dark-theme .topbar .icon,
+    body.dark-theme .topbar svg {
+      fill: #F97316 !important;
+    }
+
+    body.dark-theme .stats-inner,
+    body.dark-theme .quick-specs-inner {
+      border-color: #334155 !important;
+    }
+
+    body.dark-theme .stat-cell,
+    body.dark-theme .qspec {
+      border-color: #334155 !important;
+    }
+
+    body.dark-theme input,
+    body.dark-theme textarea,
+    body.dark-theme select {
+      background: #0f172a !important;
+      color: #f8fafc !important;
+      border-color: #334155 !important;
+    }
+
+    body.dark-theme input:focus,
+    body.dark-theme textarea:focus,
+    body.dark-theme select:focus {
+      border-color: var(--orange) !important;
+      background: #1e293b !important;
+    }
+
+    body.dark-theme .contact-form label {
+      color: #cbd5e1 !important;
+    }
+
+    body.dark-theme .faq-item {
+      background: #0f172a !important;
+      border-color: #334155 !important;
+    }
+
+    body.dark-theme .faq-q {
+      color: #e2e8f0 !important;
+    }
+
+    body.dark-theme .faq-a {
+      color: #94a3b8 !important;
+    }
+
+    body.dark-theme .process-step {
+      background: #0f172a !important;
+      border-color: #334155 !important;
+    }
+
+    body.dark-theme .breadcrumb,
+    body.dark-theme .breadcrumb a {
+      color: #cbd5e1 !important;
+    }
+
+    body.dark-theme .prod-footer,
+    body.dark-theme footer,
+    body.dark-theme .footer-top,
+    body.dark-theme .footer-bottom {
+      background: #000000 !important;
+    }
+
+    body.dark-theme .factory {
+      background: #020617 !important;
+      color: #e2e8f0 !important;
+    }
+
+    body.dark-theme .factory-text {
+      color: #cbd5e1 !important;
+    }
+
+    body.dark-theme .logo img,
+    body.dark-theme .logo-mark img {
+      filter: brightness(0) invert(1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PAGE LOADER -->
+  <div class="loader" id="loader"
+    style="background: #000; display: flex; align-items: center; justify-content: center;"><img src="brush_loader.gif"
+      alt="Loading..." style="width: 120px; height: 120px; object-fit: contain;"></div>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="tel:+919876543210">📞 +91 98765 43210</a>
+      <a href="mailto:info@autofill.in">✉ info@autofill.in</a>
+      <span style="color:#64748B">ISO 9001:2015 Certified</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo-mark" style="display:flex; align-items:center;">
+        <img src="website logo@300x-8.png" alt="Shanmugam Industries Logo" style="height: 48px; width: auto;">
+      </a>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="index.html#products">Products</a>
+        <span class="breadcrumb-sep">›</span>
+        <span id="breadcrumb-name" style="color:var(--navy);font-weight:600">Loading...</span>
+      </div>
+
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#why">Why Choose Us</a>
+        <a href="index.html#factory">Factory</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap:16px;">
+        <a href="index.html#contact" class="header-cta">Request Quote →</a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <div class="prod-hero" id="prodHero">
+    <div class="prod-hero-bg">
+      <img src="product_hero.webp" alt="AutoFill Products" id="heroBgImg" width="800" height="600">
+    </div>
+    <div class="prod-hero-overlay"></div>
+    <div class="prod-hero-particles" id="particles"></div>
+    <div class="prod-hero-grid"></div>
+    <div class="prod-hero-content">
+      <div class="prod-hero-left">
+        <div class="prod-eyebrow" id="prod-eyebrow">AutoFill Premium</div>
+        <h1 class="prod-hero-title" id="prod-title">Loading<br><span>Product</span></h1>
+        <p class="prod-hero-tag" id="prod-tag">Loading...</p>
+        <div class="prod-hero-btns">
+          <a href="index.html#contact" class="btn-primary">Request Quote →</a>
+          <a href="#" class="btn-wa" id="wa-btn" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12c0 1.82.487 3.53 1.338 5.006L2 22l5.13-1.325A9.95 9.95 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.12l-.293-.174-3.045.786.81-2.975-.19-.306A7.97 7.97 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+            </svg>
+            WhatsApp Now
+          </a>
+        </div>
+      </div>
+      <div class="prod-hero-right">
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK SPECS BAR -->
+  <div class="quick-specs">
+    <div class="quick-specs-inner" id="quickSpecsBar">
+      <div class="qspec">
+        <div class="qspec-val">—</div>
+        <div class="qspec-label">Dry Time</div>
+      </div>
+      <div class="qspec">
+        <div class="qspec-val">—</div>
+        <div class="qspec-label">Pot Life</div>
+      </div>
+      <div class="qspec">
+        <div class="qspec-val">—</div>
+        <div class="qspec-label">Coverage</div>
+      </div>
+      <div class="qspec">
+        <div class="qspec-val">—</div>
+        <div class="qspec-label">Shelf Life</div>
+      </div>
+    </div>
+  </div>
+  <!-- PRODUCT DESCRIPTION -->
+  <section class="desc-section" id="description">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">Product Details</div>
+        <h2 class="section-title">Product <span>Description</span></h2>
+        <div class="divider-line"></div>
+      </div>
+      <div class="desc-content reveal">
+        <p id="prod-full-desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">Product Gallery</div>
+        <h2 class="section-title">See It In <span>Action</span></h2>
+        <div class="divider-line"></div>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-img main" onclick="openLightbox('product_hero.webp')">
+          <img src="product_hero.webp" alt="AutoFill Product Range" width="800" height="600">
+          <div class="gallery-img-overlay"></div>
+          <div class="gallery-img-label">🔍 Premium Product Range</div>
+        </div>
+        <div class="gallery-img side" onclick="openLightbox('product_application.webp')">
+          <img src="product_application.webp" alt="Product Application" width="800" height="600">
+          <div class="gallery-img-overlay"></div>
+          <div class="gallery-img-label">🔍 Professional Application</div>
+        </div>
+        <div class="gallery-img side" onclick="openLightbox('product_sanding.webp')">
+          <img src="product_sanding.webp" alt="Sanding Result" width="800" height="600">
+          <div class="gallery-img-overlay"></div>
+          <div class="gallery-img-label">🔍 Perfect Sanding Result</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Gallery" id="lightboxImg" width="800" height="600">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  </div>
+
+
+
+  <!-- YouTube Modal -->
+  <div class="yt-modal" id="ytModal" onclick="closeVideoModal()">
+    <div class="yt-modal-inner" onclick="event.stopPropagation()">
+      <button class="yt-close" onclick="closeVideoModal()">✕</button>
+      <iframe id="ytFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- SPECS SECTION -->
+  <section class="specs-section" id="specs">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">Technical Data</div>
+        <h2 class="section-title">Technical <span>Specifications</span></h2>
+        <div class="divider-line"></div>
+      </div>
+      <div class="specs-grid-full" id="specsGrid"></div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section class="benefits-section" id="benefits">
+    <div class="container">
+      <div class="benefits-grid">
+        <div>
+          <div class="reveal">
+            <div class="section-eyebrow">Why Choose This</div>
+            <h2 class="section-title">Key <span>Benefits</span></h2>
+            <div class="divider-line"></div>
+          </div>
+          <div class="benefits-list-full reveal" id="benefitsList"></div>
+        </div>
+        <div class="benefits-image-wrap reveal reveal-delay-1">
+          <img src="product_sanding.webp" alt="Perfect Finish" width="800" height="600">
+          <div class="benefits-badge">
+            <div class="benefits-badge-num">15+</div>
+            <div class="benefits-badge-text">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="how-to-use" id="how-to-use">
+    <div class="htu-header reveal">
+      <div class="htu-eyebrow">Step By Step</div>
+      <h2 class="htu-title">How To <span>Use</span></h2>
+    </div>
+    <div class="htu-container">
+      <!-- Step 1 -->
+      <div class="htu-step reveal">
+        <div class="htu-node">
+          <div class="htu-hex">
+            <span class="htu-num">1</span>
+          </div>
+          <div class="htu-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 19V5h14v14H5z" />
+              <path d="M12 8a3 3 0 100 6 3 3 0 000-6z" />
+              <line x1="16" y1="5" x2="16" y2="19" stroke-dasharray="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="htu-step-title">Surface Prep</div>
+        <div class="htu-step-desc">Clean and sand the repair area. Remove all rust, dust, and grease thoroughly to
+          ensure perfect adhesion.</div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="htu-step reveal reveal-delay-1">
+        <div class="htu-node">
+          <div class="htu-hex">
+            <span class="htu-num">2</span>
+          </div>
+          <div class="htu-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="4" y="6" width="6" height="12" rx="1" />
+              <rect x="14" y="8" width="6" height="10" rx="1" />
+              <line x1="4" y1="10" x2="10" y2="10" />
+              <line x1="14" y1="12" x2="20" y2="12" />
+            </svg>
+          </div>
+        </div>
+        <div class="htu-step-title">Mix Putty</div>
+        <div class="htu-step-desc">Mix the putty with hardener in a 100:23 ratio. Blend until a uniform, consistent color
+          is achieved.</div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="htu-step reveal reveal-delay-2">
+        <div class="htu-node">
+          <div class="htu-hex">
+            <span class="htu-num">3</span>
+          </div>
+          <div class="htu-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 10h18l-2 8H5l-2-8z" />
+              <path d="M7 10V6a2 2 0 012-2h6a2 2 0 012 2v4" />
+            </svg>
+          </div>
+        </div>
+        <div class="htu-step-title">Apply Evenly</div>
+        <div class="htu-step-desc">Apply smoothly using a spreader. Work quickly and efficiently within the recommended
+          pot life window.</div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="htu-step reveal reveal-delay-3">
+        <div class="htu-node">
+          <div class="htu-hex">
+            <span class="htu-num">4</span>
+          </div>
+          <div class="htu-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+            </svg>
+          </div>
+        </div>
+        <div class="htu-step-title">Allow to Dry</div>
+        <div class="htu-step-desc">Let the applied putty set and dry completely for 30-45 minutes to ensure a strong, durable finish.</div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="htu-step reveal reveal-delay-4">
+        <div class="htu-node">
+          <div class="htu-hex">
+            <span class="htu-num">5</span>
+          </div>
+          <div class="htu-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 4l-8 8 8 8 8-8-8-8z" />
+              <line x1="12" y1="8" x2="12" y2="16" />
+              <line x1="8" y1="12" x2="16" y2="12" />
+            </svg>
+          </div>
+        </div>
+        <div class="htu-step-title">Sand &amp; Finish</div>
+        <div class="htu-step-desc">After curing, sand the surface completely smooth. It is now perfectly prepared for
+          primer and paint.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div>
+          <h2 class="cta-title">Ready to Order <span>Wholesale?</span></h2>
+          <p class="cta-sub">Get best dealer prices, bulk discounts, and fast delivery across India and export markets.
+          </p>
+        </div>
+        <div class="cta-btns">
+          <a href="index.html#contact" class="btn-primary" style="justify-content:center;font-size:14px">Request Bulk
+            Quote →</a>
+          <a href="https://wa.me/919876543210" class="btn-wa" style="justify-content:center;font-size:14px"
+            target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            </svg>
+            Chat on WhatsApp
+          </a>
+          <a href="index.html" style="text-align:center;font-size:13px;color:var(--gray);margin-top:4px;display:block">←
+            Back to all products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <div class="prod-footer">
+    <p>© 2024 <a href="index.html">AutoFill Premium Body Solutions</a> · ISO 9001:2015 Certified Manufacturer</p>
+  </div>
+
+  <script>
+    // ===== PRODUCT DATA =====
+    const products = [
+      {
+        name: "Shanmugam Metal Paste", tag: "Premium Repair • High Strength Bonding", image: "metal_paste.webp",
+        desc: "Shanmugam Metal Paste is a high-strength shanmugam auto smooth designed for heavy-duty automotive and industrial repairs. Formulated to bond exceptionally well to bare metal, providing structural integrity to damaged panels.",
+        specs: [{ label: "Dry Time", val: "Start: 6 mins<br>End: 30-45 mins" }, { label: "Pot Life", val: "3-6 months" }, { label: "Mix Ratio", val: "100:23" }, { label: "Pack Size", val: "200g,400g,1kg,2kg" }],
+        benefits: ["Maximum strength metal bonding", "Exceptional vibration resistance", "Non-sagging formula", "Prevents rust and corrosion", "Easy to mix and apply", "Perfect for deep dents"],
+        uses: "Heavy dent repair, rust hole filling, welding seam coverage, structural panel restoration"
+      },
+
+      {
+        name: "shanmugam auto smooth", tag: "Professional Grade • Easy Sanding", image: "body_filler.webp",
+        desc: "The industry standard AutoFill shanmugam auto smooth. Engineered for professional auto body shops, delivering an ultra-smooth finish with minimal sanding effort while maintaining excellent vertical hold.",
+        specs: [{ label: "Dry Time", val: "Start: 6 mins<br>End: 30-45 mins" }, { label: "Pot Life", val: "3-6 months" }, { label: "Mix Ratio", val: "100:23" }, { label: "Pack Size", val: "200g,400g,1kg,2kg" }],
+        benefits: ["Lightweight professional formula", "Pin-hole free finish", "Zero shrinkage after curing", "Superior vertical stability", "Exceptional surface build", "Reduces abrasive paper wear"],
+        uses: "Large panel repair, hood filling, broad surface leveling, commercial vehicle repair"
+      },
+
+      {
+        name: "Shanmugam titen filler", tag: "Polyester Base • Deep Dent Filler", image: "maroon_putty.webp",
+        desc: "Our signature Shanmugam titen filler offers an ideal balance of smooth application and strong adhesion. Recognized by its distinct maroon color, it provides a flawless base for any automotive paint job.",
+        specs: [{ label: "Dry Time", val: "Start: 6 mins<br>End: 30-45 mins" }, { label: "Pot Life", val: "3-6 months" }, { label: "Mix Ratio", val: "100:23" }, { label: "Pack Size", val: "200g,400g,1kg,2kg" }],
+        benefits: ["Smooth, butter-like application", "Excellent feather edging", "Fast curing time", "Easy to sand – saves labor", "High build capacity", "Paintable in 30 minutes"],
+        uses: "Standard auto body repair, surface leveling, fiberglass repair, general dent filling"
+      },
+
+      {
+        name: "shanmugam Aqua proof", tag: "Marine Grade • Water Resistant", image: "boat_putty.webp",
+        desc: "AutoFill shanmugam Aqua proof is a marine-grade structural filler designed specifically for fiberglass, wood, and metal hull repairs. Formulated to withstand extreme moisture and marine environments.",
+        specs: [{ label: "Dry Time", val: "Start: 6 mins<br>End: 30-45 mins" }, { label: "Pot Life", val: "3-6 months" }, { label: "Mix Ratio", val: "100:23" }, { label: "Pack Size", val: "200g,400g,1kg,2kg" }],
+        benefits: ["100% waterproof after curing", "Resistant to salt water", "Bonds to fiberglass and wood", "High impact resistance", "Prevents osmosis blistering", "Flexible under stress"],
+        uses: "Boat hull repair, deck restoration, marine fiberglass patching, waterline leveling"
+      },
+
+      {
+        name: "shanmugam ultra fill", tag: "Multi-Surface • Flexible Bonding", image: "tiles_wood_paste.webp",
+        desc: "A versatile architectural filler designed for repairing ceramics, tiles, and wooden surfaces. AutoFill shanmugam ultra fill flexes with natural material expansion to prevent cracking.",
+        specs: [{ label: "Dry Time", val: "Start: 6 mins<br>End: 30-45 mins" }, { label: "Pot Life", val: "3-6 months" }, { label: "Mix Ratio", val: "100:23" }, { label: "Pack Size", val: "200g,400g,1kg,2kg" }],
+        benefits: ["Moves with wood expansion", "Excellent ceramic adhesion", "Stainable and paintable", "Does not shrink or crack", "Smooth architectural finish", "Longer pot life for large areas"],
+        uses: "Furniture repair, tile gap filling, wooden door restoration, architectural molding"
+      },
+
+      {
+        name: "Shanmugam Spot Putty", tag: "Precision Repair • Pinhole Filler", image: "spot_putty.webp",
+        desc: "Shanmugam Spot Putty is the ultimate finishing glaze. A 1K ready-to-use formula designed to seamlessly fill minor pinholes, scratches, and stone chips before final priming.",
+        specs: [{ label: "Dry Time", val: "Start: 6 mins<br>End: 30-45 mins" }, { label: "Pot Life", val: "3-6 months" }, { label: "Mix Ratio", val: "100:23" }, { label: "Pack Size", val: "200g,400g,1kg,2kg" }],
+        benefits: ["No mixing required (1K formula)", "Dries exceptionally fast", "Eliminates micro-pinholes", "Glass-smooth surface finish", "Ready to prime immediately", "Zero bleed-through"],
+        uses: "Stone chip repair, minor scratch filling, pre-paint final glazing, pinhole correction"
+      },
+
+      {
+        name: "Shanmugam Airline Putty", tag: "Aerospace Grade • Ultra Lightweight", image: "airline_putty.webp",
+        desc: "Our most advanced lightweight formulation. Shanmugam Airline Putty is engineered for aerospace and high-performance racing applications where weight reduction and aerodynamic smoothness are critical.",
+        specs: [{ label: "Dry Time", val: "Start: 6 mins<br>End: 30-45 mins" }, { label: "Pot Life", val: "3-6 months" }, { label: "Mix Ratio", val: "100:23" }, { label: "Pack Size", val: "200g,400g,1kg,2kg" }],
+        benefits: ["Ultra-low density formula", "Extreme temperature resistance", "Vibration and shock absorbing", "Flawless aerodynamic finish", "Effortless dry sanding", "Premium epoxy-hybrid base"],
+        uses: "Aviation panel repair, carbon fiber finishing, racing car bodies, weight-sensitive leveling"
+      }
+    ];
+
+    const specIcons = ['<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14H11v-4h2v4zm0-6H11V8h2v2z"/>', '<path d="M3 17l18-7-18-7v5l13 2-13 2v5z"/>', '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/>', '<path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 12.5h-2v-5l-3 3.5H8l-3-3.5v5H3V7h2l4 5 4-5h2v9.5z"/>'];
+
+    // Get product index from URL
+    const params = new URLSearchParams(location.search);
+    let idx = parseInt(params.get('id')) || 0;
+    if (idx < 0 || idx >= products.length) idx = 0;
+    const p = products[idx];
+
+    // ===== POPULATE PAGE =====
+    function initPage() {
+      document.title = p.name + ' – AutoFill Premium Body Solutions';
+      document.getElementById('breadcrumb-name').textContent = p.name;
+      document.getElementById('prod-eyebrow').textContent = 'AutoFill ' + p.name;
+      const titleEl = document.getElementById('prod-title');
+      const parts = p.name.split(' ');
+      titleEl.innerHTML = parts.slice(0, -1).join(' ') + '<br><span>' + parts[parts.length - 1] + '</span>';
+      document.getElementById('prod-tag').textContent = p.tag;
+      document.getElementById('prod-full-desc').textContent = p.desc;
+      document.getElementById('wa-btn').href = 'https://wa.me/919876543210?text=Hi, I am interested in ' + encodeURIComponent(p.name);
+      // Can Image
+      const canImg = document.getElementById('prod-can-img');
+      if (canImg) {
+        canImg.src = p.image;
+        canImg.alt = p.name;
+      }
+      // Quick specs bar
+      const qBar = document.getElementById('quickSpecsBar');
+      const qSpecs = [p.specs[0], p.specs[1], p.specs[2], p.specs[3]];
+      qBar.innerHTML = qSpecs.map(s => `<div class="qspec"><div class="qspec-val">${s.val}</div><div class="qspec-label">${s.label}</div></div>`).join('');
+
+      // Specs
+      document.getElementById('specsGrid').innerHTML = p.specs.map((s, i) => `
+    <div class="spec-card reveal" style="transition-delay:${i * .06}s">
+      <div class="spec-card-icon"><svg viewBox="0 0 24 24">${specIcons[i] || specIcons[0]}</svg></div>
+      <div class="spec-card-label">${s.label}</div>
+      <div class="spec-card-val">${s.val}</div>
+    </div>`).join('');
+      // Benefits
+      const bIcons = ['<path d="M9 11l3 3L22 4"/>', '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>', '<circle cx="12" cy="12" r="10"/>', '<path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21.02 7 14.14 2 9.27l6.91-1.01L12 2z"/>', '<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>', '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'];
+      document.getElementById('benefitsList').innerHTML = p.benefits.map((b, i) => `
+    <div class="benefit-row reveal" style="transition-delay:${i * .08}s">
+      <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">${bIcons[i] || bIcons[0]}</svg></div>
+      <div><div class="benefit-text">${b}</div></div>
+    </div>`).join('');
+
+      // Re-observe new reveal elements
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    }
+
+    // ===== LIGHTBOX =====
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // ===== MOBILE MENU =====
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      const hamburger = document.querySelector('.hamburger');
+      if (nav && hamburger) {
+        nav.classList.toggle('active-mobile');
+        hamburger.classList.toggle('active');
+      }
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ===== VIDEO MODAL =====
+    function openVideoModal() {
+      document.getElementById('ytFrame').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+      document.getElementById('ytModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeVideoModal() {
+      document.getElementById('ytFrame').src = '';
+      document.getElementById('ytModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeLightbox(); closeVideoModal(); } });
+
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+
+    // ===== FLOATING PARTICLES =====
+    function createParticles() {
+      const container = document.getElementById('particles');
+      const colors = ['rgba(249,115,22,.6)', 'rgba(37,99,235,.5)', 'rgba(255,255,255,.3)'];
+      for (let i = 0; i < 20; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 8 + 3;
+        p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 100}%;background:${colors[Math.floor(Math.random() * colors.length)]};animation-duration:${Math.random() * 15 + 8}s;animation-delay:${Math.random() * 8}s;`;
+        container.appendChild(p);
+      }
+    }
+
+    // ===== PAGE LOADER =====
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) loader.classList.add('done');
+      }, 0);
+      createParticles();
+      initPage();
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    });
+  </script>
+  <!-- APP BOTTOM NAV -->
+  <div class="app-bottom-nav">
+    <div class="app-bottom-nav-inner">
+      <a href="index.html#home" class="app-nav-item">
+        <svg viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+        Home
+      </a>
+      <a href="index.html#products" class="app-nav-item active">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z" />
+        </svg>
+        Products
+      </a>
+      <a href="https://wa.me/919876543210" target="_blank" class="app-nav-item">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        </svg>
+        WhatsApp
+      </a>
+      <a href="tel:+919876543210" class="app-nav-item">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+        </svg>
+        Call
+      </a>
+    </div>
+  </div>
+</body>
+</html>
