@@ -2775,6 +2775,31 @@
             stroke-linejoin: round;
         }
 
+        @media (max-width: 768px) {
+            .compare-table {
+                min-width: 100%;
+            }
+            .compare-table th {
+                padding: 12px 8px;
+                font-size: 12px;
+            }
+            .compare-table td {
+                padding: 10px 8px;
+                font-size: 11px;
+            }
+            .compare-table td:first-child {
+                font-size: 11px;
+                padding-left: 10px;
+                max-width: 90px;
+                white-space: normal;
+                word-wrap: break-word;
+            }
+            .check-col svg, .cross-col svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
         /* DEALER LOCATOR */
         .dealer-locator {
             background: var(--lightgray);
@@ -4678,7 +4703,7 @@
     </section>
 
     <!-- FACTORY TOUR -->
-    <section class="factory" id="factory">
+    <section class="factory" id="factory" style="display: none;">
         <div class="container">
             <div class="factory-grid">
                 <div class="factory-left reveal">
@@ -5286,6 +5311,18 @@
                 hamburger.classList.toggle('active');
             }
         }
+
+        // Close mobile menu on link click
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.querySelector('nav');
+                const hamburger = document.querySelector('.hamburger');
+                if (nav && nav.classList.contains('active-mobile')) {
+                    nav.classList.remove('active-mobile');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
 
         // ===== FORM HANDLERS =====
         function handleDownload(btn) {
